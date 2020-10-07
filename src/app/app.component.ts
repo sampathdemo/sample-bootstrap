@@ -11,5 +11,20 @@ export class AppComponent {
                     {type:'blueprint',name:'Server',content:'this is Blue Server'}];
   title = 'sample-bootstrap';
 
+  onServerAdded(serverData: {serverName:string, serverContent:string}){
+      this.serverElements.push({
+        type:'server',
+        name: serverData.serverName,
+        content: serverData.serverContent
+      });
+     }
+  onBlueprintAdded(serverData: {serverName:string, serverContent:string}){
+        this.serverElements.push({
+          type:'blueprint',
+          name: serverData.serverName,
+          content: serverData.serverContent
+         });
+    }
+
 
 }
