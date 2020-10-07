@@ -1,14 +1,13 @@
 <div class="container">
-  <div class="row">
+  <app-cockpit></app-cockpit>
+<hr>
+<div class="row">
   <div class="col-xs-12">
-    <p>Add new servers or blueprint</p>
-    <label>Server name</label>
-    <input type="text" class="form-control" [(ngModel)] = "newServername">
-    <label>Server Content</label>
-    <input type="text" class="form-control" [(ngModel)] = "newServerContent">
-    <br>
-
+<app-server-element
+*ngFor = "let serverElement of serverElements"
+[srvElement] = "serverElement"></app-server-element>
+  </div>
   </div>
 </div>
 
-</div>
+
